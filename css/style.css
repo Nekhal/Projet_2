@@ -5,7 +5,6 @@
     --ciel: #deebff;
     --grey: #f2f2f2;
 }
-
 Body {
     font-family: 'Raleway',sans-serif;
     max-width: 1440px;
@@ -19,6 +18,7 @@ a {
     text-decoration: none;
     color: black;
 }
+/*Mise en forme du header*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@ nav {
 .logo {
     width: 61.09px;
     height: auto;
-    margin:  44px 0 0 0px;
+    margin:  44px 0 0 0;
 }
 #NavBar {    
     display: flex;
@@ -57,9 +57,10 @@ nav {
     line-height: 19px;
     text-align: center;
 }
-.effect:hover{
+.effect:hover{    
     color: var(--blue);
 }
+/*Mise en forme de la partie accroche*/
 h1 {    
     font-size: 22px;
     font-weight: 700;    
@@ -69,9 +70,10 @@ h1 {
     font-size: 16px;
     margin-top: -5px;
 }
+/*Mise en forme de la barre de recherche*/
 #searchInput {
     border: none;
-    height: 49px;
+    height: 45px;
     width: 230px;
     border-top: #f2f2f2 1px solid;
     border-bottom: #f2f2f2 1px solid;
@@ -83,11 +85,11 @@ h1 {
     border: none;
     outline: none;
     border-top: #f2f2f2 1px solid;
-    border-bottom: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;    
 }
 #search {
     display: flex;
-    height: 53px;
+    height: 49px;
     margin-top: 20px;
 }
 #searchButton {
@@ -104,31 +106,41 @@ h1 {
 }
 #icon {
     width: 50px;
-    height: 53px;    
+    height: 49px;    
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 15px 0 0 15px;
     background-color: var(--grey);
 }
-.filtres {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;    
-    margin: 20px 15px 20px 0;
-    }
+/*Mise en forme de la partie filtres*/
 h2 {
     font-size: 18px;
     padding-right: 20px;   
 }
+.filtres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center ;
+    margin: 20px 15px 20px 0;
+}
 .filtres i {
+    display: flex;
+    flex-wrap:nowrap ;    
     width: 22px;
     height: auto;
     color: var(--blue);
     margin-right: 10px;
 }
-.filtres div{
+.choice {
     display: flex;
+    flex-wrap:wrap ;
+}
+.choice div{
+    display: flex;    
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     margin: 15px 22px 15px 15px;
@@ -141,9 +153,10 @@ h2 {
     border-radius: 25px;   
     cursor: pointer;    
 }
-.filtres div:hover {
+.choice div:hover {
     background-color: var(--ciel);
 }
+/*Mise en forme de la partie "Infos"*/
 .fa-info {
     color: var(--blue);
     font-size: 10px;
@@ -159,6 +172,7 @@ h2 {
     font-size: 16px;
     font-weight: 400;
 }
+/*Mise en forme des parties "hébergements" et "populaires"*/
 .Bloc2 {
     display: flex;
     flex-wrap: wrap;
@@ -180,8 +194,9 @@ article {
 .article2 {
     width: 32%;
     order: 0;
-    min-width:420px;   
+    min-width:420px;  
 }
+/*Mise en forme de la partie "hébergements"*/
 h3 {
     font-size: 22px;
     font-weight: 700;
@@ -246,6 +261,7 @@ h4 {
     font-weight: 700;
     margin: 12px 44px ;
 }
+/*Mise en forme de la partie "Populaires"*/
 .mostPop {
     display: flex;
     flex-wrap: nowrap;
@@ -273,7 +289,7 @@ h4 {
     background-color: white; 
     margin-bottom: 33px;        
     height: 144px;
-    /*min-width: 252px; */   
+    min-width: 252px;    
     border-radius: 20px;       
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);    
 }
@@ -303,6 +319,7 @@ h4 {
     margin: 0;
     margin-top: -40px;       
 }
+/*Mise en forme de la partie "Activités"*/
 .Bloc3 {    
     margin: 60px 0;        
 }
@@ -343,6 +360,7 @@ h4 {
     margin-top: 2px;
     margin-left: 19px;
 }
+/*Mise en forme du footer*/
 footer{ 
     margin-top: 60px;   
     background-color: #f2f2f2;
@@ -370,21 +388,28 @@ footer a {
     font-weight: 400;
     margin-bottom: 12px;
 }
-/*  >=992 px pour les écrans d'ordinateurs;
-    >=768 px pour les tablettes;
-    et tout ce qui est en dessous de 768 pour les téléphones portables .*/
 
 @media screen and (max-width: 1023px) {
+    /*Modifications générales*/
+    body {
+        max-width: 1024px;
+    }
     header, main, footer {
         margin: 0 70px;
-    }        
+    } 
+    /*Modifications barre de recherche*/       
     #searchButton {        
         width: 15%;        
     }
-    .filtres div{        
+    /*Modifications des filtres*/
+    .filtres i {
+        margin-right: 5px;
+    }
+    .choice div{        
         margin: 15px 20px 15px 0px;
         padding: 10px 15px;
-    }    
+    } 
+    /*Modifications des parties "populaire" et "hébergements"*/   
     article {        
         min-height: 278px;
     }
@@ -395,9 +420,11 @@ footer a {
         width: 100%;
         margin-top: 53px;                
     }
+    /*Modifications de la partie "hébergements"*/
     .more {        
         margin:  12px 44px 46px 44px ;
     }
+    /*Modifications partie "populaire"*/
     .PopContainer {        
         flex-direction: row;              
         width: 93%;              
@@ -423,6 +450,7 @@ footer a {
     .PopContent p {
         font-size: 13px;           
     }
+    /*Modifications de la partie "Activités"*/
     .Bloc3 {    
         margin: 70px 0;        
     }    
@@ -434,12 +462,220 @@ footer a {
         height: 267px;
     }  
     .caption {        
-        width: 182px;
+        width: 100%;
     }    
     .ndg {
         margin-right: 40px;
-    }    
+    }
+    /*Modifications du Footer*/    
     footer{ 
         margin-top: 70px;        
     }        
+}
+
+@media screen and (max-width: 767px) {
+    /*Modifications générales*/
+    body {
+        max-width: 375px;        
+    }        
+    header, main, footer {
+        margin: 0;
+        background-color: white;
+    }
+    /*Modifications header*/
+    nav{
+        flex-direction: column;
+        height: 100px;
+    }
+    .logo{
+        margin:  21px 0 0 0;
+    }
+    #NavBar {        
+        width: 100%;           
+    }
+    .NavContent1, .NavContent2 {              
+        border-bottom: #f2f2f2 3px solid;
+    }
+    .NavContent1:hover, .NavContent2:hover {
+        border-top: none;                
+        border-bottom: var(--blue) 3px solid;
+    }
+    .effect {        
+        margin-bottom: 23px;        
+    }
+    /*Modifications Phrases d'accroche*/ 
+    h1 {
+        margin-top: 31px;
+        margin-left: 22px;
+        margin-right: 10px;
+    }
+    .pH1 {
+        font-size: 16px;
+        margin-top: 13px;
+        margin-left: 22px;
+    }
+    /*Modifications barre de recherche*/
+    #searchInput {
+        width: 216px;
+    }
+    #search {
+        display: flex;
+        justify-content: center;        
+        margin-top: 36px;        
+    }
+    #searchButtonPhone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--blue);
+        color: white;
+        font-weight: 700;
+        border-radius: 0 15px 15px 0;
+        border: none;
+        width: 13%;
+        cursor: pointer;
+    }
+    #searchButton {
+        display: none;
+    }
+    /*Modifications des filtres*/
+    .filtres {
+        margin: 20px;
+    }
+    .filtres i {          
+        font-size: 18px;        
+        margin-right: 3px;
+        padding-left: 10px;
+    }    
+    .choice {
+        display: flex;
+        flex-wrap:wrap ;
+        justify-content: space-between;
+    }
+    .choice div{
+        display: flex;    
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 7px 0 8px 0;
+        padding: 0;
+        font-size: 11px;
+        width: 156px;
+        height: 46px;        
+    }    
+    .choice div:hover {
+        background-color: var(--ciel);
+    }
+    /*Modification partie "info"*/
+    .info {        
+        margin: 33px 20px 0px 20px;
+    }
+    .fa-info {        
+        font-size: 12px;        
+        padding: 6px 9px;
+        margin-right: 8px;
+    }
+    .info p {
+        display: flex;        
+        margin-top: -21px;
+        margin-left: 34px;        
+    } 
+    /*Modifications des parties "populaire" et "hébergements"*/
+    .Bloc2 {        
+        justify-content: center;
+    }   
+    article {        
+        border-radius: 0;
+        margin: 0;
+        min-height: 1px;
+    }    
+    .article1 {
+        width: 100%;
+        order: 1;
+        background-color: white;
+    }
+    .article2 {
+        width: 100%;         
+        min-width: 1px;
+        margin-top: 20px;
+    }
+    /*Modifications partie "populaire"*/
+    h3 {        
+        margin:28px 0px 26px 20px;
+    }    
+    .fa-solid.fa-chart-line {
+        
+        margin-top: 6px;
+        margin-right: 21px;
+    }
+    .PopContainer {        
+        flex-direction: column;       
+        align-items: center; 
+        margin-bottom: 42px;       
+    }
+    .Pop {          
+        min-width:334px ;
+        margin: 5px 0;        
+    }
+    .PopImg {        
+        min-width: 127px;
+    }
+    .PopContent {
+        max-width: max-content;
+        margin-left: -8px;
+        margin-right: 0px;
+        padding-left: 15px;        
+    }
+    .PopContent h4 {
+        font-size: 16px;        
+        margin: 15px 0 0 0;
+    }
+    .PopContent p {        
+        font-size: 14px;        
+        margin-top: -30px;       
+    }
+    /*Modifications de la partie "hébergements"*/    
+    .Heb {        
+        width: 100%;       
+        margin-bottom: 12px;           
+    } 
+    .more {
+        display: none;
+    } 
+    /*Modifications de la partie "Activités"*/
+    .Bloc3 {
+        margin: 95px 20px 56px 20px;
+    }
+    .Bloc3 h3 {
+        margin:0;
+        margin-right: 150px;    
+    }    
+    .activitesContainer {        
+        justify-content: center; 
+        margin: 0;
+                        
+    }
+    .actFigure {        
+        margin: 1px 0 24px 0;        
+    }
+    .actImg {        
+        width: 334px;
+        height: 190px;
+    }  
+    .caption {        
+        width: 100%;         
+    }
+    /*Modifications du Footer*/
+    footer{
+        background-color: #f2f2f2; 
+        margin-top: 0px;
+        padding-bottom: 49px;
+    }
+    .footContainer{        
+        justify-content: flex-start;        
+        margin:  0 30px ;
+    } 
+    footer div {        
+        margin-top: 39px;    
+    }    
 }
