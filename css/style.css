@@ -13,8 +13,7 @@ Body {
     margin-left: auto;  
 }
 header, main, footer {      
-    margin: 0 50px;
-    
+    margin: 0 50px;    
 }
 a {
     text-decoration: none;
@@ -318,8 +317,7 @@ h4 {
     background-color: white;    
     border-radius: 0 20px 20px 0;
     width: 60%;
-    padding: 0 15px;    
-          
+    padding: 0 15px;          
 }
 .PopContent p {
     display: flex;
@@ -578,11 +576,9 @@ footer a {
     .fas.fa-info {
         display: flex;        
         font-size: 12px;
-
     }
     .info p {
-           margin-top: 20px;           
-                
+           margin-top: 20px;                
     } 
     /*Modifications des parties "populaire" et "hébergements"*/
     .Bloc2 {        
@@ -607,8 +603,7 @@ footer a {
     h3 {        
         margin:28px 0px 26px 20px;
     }    
-    .fa-solid.fa-chart-line {
-        
+    .fa-solid.fa-chart-line {        
         margin-top: 6px;
         margin-right: 21px;
     }
@@ -620,7 +615,6 @@ footer a {
     .Pop {          
         min-width:334px ;
         margin: 0 0 10px 0;
-
     }
     .PopImg {        
         min-width: 127px;
@@ -658,8 +652,7 @@ footer a {
     }    
     .activitesContainer {        
         justify-content: center; 
-        margin: 0;
-                        
+        margin: 0;                        
     }
     .actFigure {        
         margin: 1px 0 24px 0;        
