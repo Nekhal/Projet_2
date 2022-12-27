@@ -286,7 +286,7 @@ h4 {
 }
 .PopContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;            
     width: 82%;
     margin-left: auto; 
@@ -433,6 +433,7 @@ footer a {
     }
     /*Modifications partie "populaire"*/
     .PopContainer {
+        flex-direction: row;
         flex-wrap: nowrap; 
         justify-content: center;                   
         width: 95%;
@@ -441,7 +442,7 @@ footer a {
         width: 30%;
         margin: 0 11px 0 12px;        
     }
-    .PopContent {
+    .PopContent {        
         padding-left: 5px;
     }
     .PopContent h4 {
