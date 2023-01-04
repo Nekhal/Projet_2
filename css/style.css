@@ -125,35 +125,37 @@ h2 {
 .filtres {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;    
     align-items: center ;
-    margin: 20px 15px 20px 12px;
+    width: 67%;
+    margin: 20px 0;
 }
 .filtres i {
     display: flex;
     flex-wrap:nowrap ;    
     width: 22px;
     height: auto;
-    color: var(--blue);
-    margin-right: 10px;
+    color: var(--blue);    
 }
 .choice {
     display: flex;
-    flex-wrap:wrap ;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    width: 100%; 
+    margin-left: 20px;  
 }
 .choice div {
     display: flex;    
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 22px 15px 15px;
+    justify-content: space-between;   
+    align-items: center;        
+    margin: 15px 25px 15px 0;
     font-size: 17px;
-    font-weight: 700;
-    line-height: 20px;
+    font-weight: 700;    
     background-color: rgba(255, 255, 255, 0);
     border: #d9d9d9 2px solid;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 25px;   
     cursor: pointer;    
 }
@@ -214,16 +216,21 @@ h3 {
 }
 .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: space-around;    
-    padding: 0 20px;     
+    padding: 0 40px;   
+}
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .Heb {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 246px;    
+    width: 30%;
     border-radius: 20px;
     margin-bottom: 30px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);    
@@ -332,24 +339,28 @@ h4 {
     margin: 60px 0;        
 }
 .Bloc3 h3 {
-    margin: 0;    
+    margin: 0; 
 }
 .activitesContainer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;          
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;              
+}
+.Bloc3 a {
+    width: 23%;
 }
 .actFigure {
     position: relative;
     border-radius: 20px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-    margin: 18px 0 0 0;    
+    margin: 18px 0 0 0;       
 }
 .actImg {         
     border-radius: 20px;
     object-fit: cover;
-    width: 302px;
+    width: 100%;
     height: 444.51px;
 }  
 .caption {
@@ -357,7 +368,7 @@ h4 {
     align-items: center;    
     position: absolute;
     background-color: #fff;
-    width: 302px;
+    width: 100%;
     height: 56px;
     margin: -58px 0px;
     padding:  0;
@@ -396,7 +407,7 @@ footer a {
     margin-bottom: 12px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
     /*Modifications générales*/
     body {        
         max-width: 1024px;
@@ -406,15 +417,18 @@ footer a {
     } 
     /*Modifications barre de recherche*/       
     #searchButton {        
-        width: 15%;        
+        width: 16%;        
     }
     /*Modifications des filtres*/
-    .filtres i {
-        margin-right: 5px;
+    .filtres {               
+        width: 90%;        
+    }
+    .choice {
+        margin-left: -10px;
     }
     .choice div {        
-        margin: 15px 20px 15px 0px;
-        padding: 10px 15px;
+        margin: 15px 5px 15px 5px;
+        padding: 10px;
     } 
     /*Modifications des parties "populaire" et "hébergements"*/   
     article {        
@@ -460,8 +474,7 @@ footer a {
     .actFigure {
         margin: 34px 0 0 0;
     }
-    .actImg {
-        width: 182px;
+    .actImg {        
         height: 267px;
     }  
     .caption {        
@@ -473,10 +486,16 @@ footer a {
     /*Modifications du Footer*/    
     footer { 
         margin-top: 70px;        
+    }
+    .footContainer {
+        flex-wrap: nowrap;        
+    }
+    footer div {
+        margin-right: 20px;
     }        
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     /*Modifications générales*/
     body {                
         max-width: 375px;        
@@ -491,7 +510,7 @@ footer a {
         height: 100px;
     }
     .logo {
-        margin:  21px 0 0 0;
+        margin: 21px 0 0 0;
     }
     #NavBar {        
         width: 100%;           
@@ -544,6 +563,7 @@ footer a {
     }
     /*Modifications des filtres*/
     .filtres {
+        flex-wrap: wrap;        
         margin: 20px;
     }
     .filtres i {          
@@ -553,8 +573,8 @@ footer a {
     }    
     .choice {
         display: flex;
-        flex-wrap:wrap ;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 0;        
     }
     .choice div {
         display: flex;    
@@ -579,7 +599,7 @@ footer a {
         font-size: 12px;
     }
     .info p {
-           margin-top: 20px;                
+        margin-top: 20px;                
     } 
     /*Modifications des parties "populaire" et "hébergements"*/
     .Bloc2 {        
@@ -634,9 +654,16 @@ footer a {
         font-size: 14px;        
         margin-top: -30px;       
     }
-    /*Modifications de la partie "hébergements"*/    
+    /*Modifications de la partie "hébergements"*/
+    .container {
+        padding: 0 20px;
+    }
+    .line {        
+        flex-direction: column;
+    }    
     .Heb {        
         width: 100%;
+        margin: 0;
         margin-top: -10px;       
         margin-bottom: 22px;           
     } 
@@ -651,19 +678,19 @@ footer a {
         margin:0;
         margin-right: 150px;    
     }    
-    .activitesContainer {        
+    .activitesContainer { 
+        flex-direction: column;       
         justify-content: center; 
-        margin: 0;                        
+        margin: 0;                                
+    }
+    .Bloc3 a {
+        width: 100%;
     }
     .actFigure {        
-        margin: 1px 0 24px 0;        
+        margin: 3px 0 24px 0;        
     }
-    .actImg {        
-        width: 334px;
+    .actImg {
         height: 190px;
-    }  
-    .caption {        
-        width: 100%;         
     }
     /*Modifications du Footer*/
     footer {
@@ -671,7 +698,8 @@ footer a {
         margin-top: 0px;
         padding-bottom: 49px;
     }
-    .footContainer {        
+    .footContainer {
+        flex-direction: column;       
         justify-content: flex-start;        
         margin:  0 30px ;
     } 
